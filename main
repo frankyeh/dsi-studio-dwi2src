@@ -12,4 +12,4 @@ bval=$(jq -r .bvals config.json)
 bvec=$(jq -r .bvecs config.json)
 
 
-time singularity exec -e docker://dsistudio/dsistudio --action=src --source=${dwi} --bval=${bval} --bvec=${bvec} --output=${dwi}.src.gz
+time singularity exec -e docker://dsistudio/dsistudio dsi_studio --action=src --source=${dwi} --bval=${bval} --bvec=${bvec} --output=${dwi}.src.gz
