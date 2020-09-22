@@ -10,5 +10,8 @@ dwi=$(jq -r .dwi config.json)
 bval=$(jq -r .bvals config.json)
 bvec=$(jq -r .bvecs config.json)
 
+dwi_base_name="${basename ${dwi}}"
+echo $dwi_base_name
 
-time singularity exec -e docker://dsistudio/dsistudio dsi_studio --action=src --source=${dwi} --bval=${bval} --bvec=${bvec} --output=${dwi}.src.gz
+ln -s ${dwi} ${dwi_base_name}
+time singularity exec -e docker://dsistudio/dsistudio dsi_studio --action=src --source=${dwi_base_name} --bval=${bval} --bvec=${bvec} --output=${dwi_base_name}.src.gz
