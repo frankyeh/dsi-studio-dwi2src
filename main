@@ -3,8 +3,7 @@
 #PBS -l nodes=1:ppn=1
 #PBS -l vmem=8gb
 #PBS -l walltime=1:00:00
-#PBS -N dsi-studio-src
-#PBS -V
+#PBS -N dsi-studio-dwi2src
 
 set -e  
 
