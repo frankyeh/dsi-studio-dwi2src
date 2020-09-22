@@ -20,4 +20,4 @@ time singularity exec -e docker://dsistudio/dsistudio dsi_studio --action=src --
 
 # move file to src folder
 mkdir src
-mv ${dwi_base_name} src
+mv ${dwi_base_name}.src.gz src
